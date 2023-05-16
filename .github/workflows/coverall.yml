@@ -3,7 +3,8 @@ name: Coveralls
 on:
   push:
     branches:
-      - main
+      - dev
+      - 19-predisposizione-build-automation
   pull_request:
 
 jobs:
