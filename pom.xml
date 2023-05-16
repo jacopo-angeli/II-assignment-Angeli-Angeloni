@@ -149,7 +149,7 @@
         <artifactId>coveralls-maven-plugin</artifactId>
         <version>4.3.0</version>
         <configuration>
-          <repoToken>COVERALLS_REPO_TOKEN</repoToken>
+          <repoToken>yourcoverallsprojectrepositorytoken</repoToken>
         </configuration>
         <dependencies>
           <dependency>
