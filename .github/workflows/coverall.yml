@@ -27,4 +27,4 @@ jobs:
         run: mvn clean install
 
       - name: 🚀 Coveralls Coverage Report Submission
-        run: mvn coveralls:report --define repoToken=${{ secrets.COVERALL_REPO_TOKEN }}
+        run: mvn coveralls:report -DrepoToken=${{ secrets.COVERALLS_TOKEN }}
