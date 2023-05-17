@@ -9,7 +9,7 @@ import org.junit.Test;
 public class IntegerToRomanTest
 {
    @Test
-   public void FirstThreeNumbers()
+   public void TestFirstThreeNumbers()
    {
       String uno=IntegerToRoman.convert(1);
       String due=IntegerToRoman.convert(2);
@@ -22,7 +22,7 @@ public class IntegerToRomanTest
       assertSame(t, tre);
    }
    @Test
-   public void FirstSixNumbers()
+   public void TestFirstSixNumbers()
    {
       String quattro=IntegerToRoman.convert(4);
       String cinque=IntegerToRoman.convert(5);
@@ -35,7 +35,7 @@ public class IntegerToRomanTest
       assertSame(t, sei);
    }
     @Test
-    public void FirstTenNumbers()
+    public void TestFirstTenNumbers()
     {
       String sette=IntegerToRoman.convert(7);
       String otto=IntegerToRoman.convert(8);
@@ -51,7 +51,7 @@ public class IntegerToRomanTest
       assertSame(x, dieci);
     }
     @Test
-    public void First20Numbers()
+    public void TestFirst20Numbers()
     {
       String undici=IntegerToRoman.convert(11);
       String dodici=IntegerToRoman.convert(12);
@@ -86,7 +86,7 @@ public class IntegerToRomanTest
     }
     // per questioni di onerosità da questo test iniziamo a testare dei valori campione e non tutto l'intervallo
     @Test
-    public void First50Numbers()
+    public void TestFirst50Numbers()
     {
       String vtre=IntegerToRoman.convert(23);
       String tuno=IntegerToRoman.convert(31);
@@ -120,7 +120,7 @@ public class IntegerToRomanTest
       assertSame(l, ttre);
     }
     @Test
-    public void First100Numbers()
+    public void TestFirst100Numbers()
     {
       String ccinque=IntegerToRoman.convert(55);
       String stre=IntegerToRoman.convert(63);
@@ -154,7 +154,7 @@ public class IntegerToRomanTest
       assertSame(l, ssei);
     }
    @Test
-   public void First500Numbers()
+   public void TestFirst500Numbers()
    {
       String dtre=IntegerToRoman.convert(123);
       String onove=IntegerToRoman.convert(189);
@@ -188,7 +188,7 @@ public class IntegerToRomanTest
       assertSame(l, tonove);
    }
    @Test
-   public void First1000Numbers()
+   public void TestFirst1000Numbers()
    {
       String tquattro=IntegerToRoman.convert(534);
       String udue=IntegerToRoman.convert(612);
