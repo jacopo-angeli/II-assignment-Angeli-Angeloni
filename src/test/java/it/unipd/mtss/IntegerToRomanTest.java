@@ -221,4 +221,8 @@ public class IntegerToRomanTest
       assertSame(i, onove);
       assertSame(l, odue);
    }
+   @Test(expected = IllegalArgumentException.class)
+        public void testInputNonValido() {
+            IntegerToRoman.convert(1001);
+        }                     
 }
