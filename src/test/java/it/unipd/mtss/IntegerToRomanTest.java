@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////
-// [Alberto] [Angeloni] [1231122]
-// [Jacopo] [Angeli] [1232583]
+// ALBERTO ANGELONI 1231122
+// JACOPO ANGELI 1232583
 ////////////////////////////////////////////////////////////////////
 package it.unipd.mtss;
 
@@ -16,9 +16,9 @@ public class IntegerToRomanTest {
       String p = "I";
       String s = "II";
       String t = "III";
-      assertSame(p, uno);
-      assertSame(s, due);
-      assertSame(t, tre);
+      assertEquals(p, uno);
+      assertEquals(s, due);
+      assertEquals(t, tre);
    }
 
    @Test
@@ -26,12 +26,13 @@ public class IntegerToRomanTest {
       String quattro = IntegerToRoman.convert(4);
       String cinque = IntegerToRoman.convert(5);
       String sei = IntegerToRoman.convert(6);
+      System.out.println(sei);
       String p = "IV";
       String s = "V";
       String t = "VI";
-      assertSame(p, quattro);
-      assertSame(s, cinque);
-      assertSame(t, sei);
+      assertEquals(p, quattro);
+      assertEquals(s, cinque);
+      assertEquals(t, sei);
    }
 
    @Test
@@ -44,10 +45,10 @@ public class IntegerToRomanTest {
       String s = "VIII";
       String t = "IX";
       String x = "X";
-      assertSame(p, sette);
-      assertSame(s, otto);
-      assertSame(t, nove);
-      assertSame(x, dieci);
+      assertEquals(p, sette);
+      assertEquals(s, otto);
+      assertEquals(t, nove);
+      assertEquals(x, dieci);
    }
 
    @Test
@@ -72,16 +73,16 @@ public class IntegerToRomanTest {
       String z = "XVIII";
       String m = "XIX";
       String v = "XX";
-      assertSame(u, undici);
-      assertSame(d, dodici);
-      assertSame(t, tredici);
-      assertSame(q, quattordici);
-      assertSame(qq, quindici);
-      assertSame(s, sedici);
-      assertSame(x, diciassette);
-      assertSame(z, diciotto);
-      assertSame(m, diciannove);
-      assertSame(v, venti);
+      assertEquals(u, undici);
+      assertEquals(d, dodici);
+      assertEquals(t, tredici);
+      assertEquals(q, quattordici);
+      assertEquals(qq, quindici);
+      assertEquals(s, sedici);
+      assertEquals(x, diciassette);
+      assertEquals(z, diciotto);
+      assertEquals(m, diciannove);
+      assertEquals(v, venti);
    }
 
    // per questioni di onerosità da questo test iniziamo a testare dei valori
@@ -108,16 +109,16 @@ public class IntegerToRomanTest {
       String h = "XXV";
       String i = "XXIX";
       String l = "XXXIII";
-      assertSame(a, vtre);
-      assertSame(b, tuno);
-      assertSame(c, totto);
-      assertSame(d, quno);
-      assertSame(e, qsei);
-      assertSame(f, qnove);
-      assertSame(g, cinquanta);
-      assertSame(h, vcinque);
-      assertSame(i, vnove);
-      assertSame(l, ttre);
+      assertEquals(a, vtre);
+      assertEquals(b, tuno);
+      assertEquals(c, totto);
+      assertEquals(d, quno);
+      assertEquals(e, qsei);
+      assertEquals(f, qnove);
+      assertEquals(g, cinquanta);
+      assertEquals(h, vcinque);
+      assertEquals(i, vnove);
+      assertEquals(l, ttre);
    }
 
    @Test
@@ -142,16 +143,16 @@ public class IntegerToRomanTest {
       String h = "LIX";
       String i = "LXVIII";
       String l = "LXXVI";
-      assertSame(a, ccinque);
-      assertSame(b, stre);
-      assertSame(c, setd);
-      assertSame(d, ouno);
-      assertSame(e, nov);
-      assertSame(f, ncinque);
-      assertSame(g, cento);
-      assertSame(h, cnove);
-      assertSame(i, sotto);
-      assertSame(l, ssei);
+      assertEquals(a, ccinque);
+      assertEquals(b, stre);
+      assertEquals(c, setd);
+      assertEquals(d, ouno);
+      assertEquals(e, nov);
+      assertEquals(f, ncinque);
+      assertEquals(g, cento);
+      assertEquals(h, cnove);
+      assertEquals(i, sotto);
+      assertEquals(l, ssei);
    }
 
    @Test
@@ -176,16 +177,16 @@ public class IntegerToRomanTest {
       String h = "CXLIII";
       String i = "CCV";
       String l = "CCCLXXXIX";
-      assertSame(a, dtre);
-      assertSame(b, onove);
-      assertSame(c, scinque);
-      assertSame(d, usette);
-      assertSame(e, venti);
-      assertSame(f, cdue);
-      assertSame(g, cinquecento);
-      assertSame(h, qtre);
-      assertSame(i, zcinque);
-      assertSame(l, tonove);
+      assertEquals(a, dtre);
+      assertEquals(b, onove);
+      assertEquals(c, scinque);
+      assertEquals(d, usette);
+      assertEquals(e, venti);
+      assertEquals(f, cdue);
+      assertEquals(g, cinquecento);
+      assertEquals(h, qtre);
+      assertEquals(i, zcinque);
+      assertEquals(l, tonove);
    }
 
    @Test
@@ -209,16 +210,16 @@ public class IntegerToRomanTest {
       String g = "M";
       String h = "DXLIII";
       String i = "DCLXXXIX";
-      String l = " DCCLXXXII";
-      assertSame(a, tquattro);
-      assertSame(b, udue);
-      assertSame(c, ctre);
-      assertSame(d, notto);
-      assertSame(e, tdue);
-      assertSame(f, scinque);
-      assertSame(g, mille);
-      assertSame(h, qtre);
-      assertSame(i, onove);
-      assertSame(l, odue);
+      String l = "DCCLXXXII";
+      assertEquals(a, tquattro);
+      assertEquals(b, udue);
+      assertEquals(c, ctre);
+      assertEquals(d, notto);
+      assertEquals(e, tdue);
+      assertEquals(f, scinque);
+      assertEquals(g, mille);
+      assertEquals(h, qtre);
+      assertEquals(i, onove);
+      assertEquals(l, odue);
    }
 }
