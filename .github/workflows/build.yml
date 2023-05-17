@@ -1,13 +1,6 @@
 name: Build
 
-on:
-  push:
-    branches:
-      - dev
-      - 19-predisposizione-build-automation
-  pull_request:
-    branches:
-      - dev
+on: [push]
 
 jobs:
   build:
