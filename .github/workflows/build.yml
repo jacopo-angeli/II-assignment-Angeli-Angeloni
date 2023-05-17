@@ -23,5 +23,5 @@ jobs:
           distribution: "adopt"
           cache: maven
 
-      - name: 🚀 Coveralls Coverage Report Submission
-        run: mvn coveralls:report -DrepoToken=${{ secrets.COVERALLS_TOKEN }}
+      - name: 📦 Build with Maven
+        run: mvn clean install
