@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class IntegerToRomanTest {
    @Test
-   public void FirstThreeNumbers() {
+   public void TestFirstThreeNumbers() {
       String uno = IntegerToRoman.convert(1);
       String due = IntegerToRoman.convert(2);
       String tre = IntegerToRoman.convert(3);
@@ -22,7 +22,7 @@ public class IntegerToRomanTest {
    }
 
    @Test
-   public void FirstSixNumbers() {
+   public void TestFirstSixNumbers() {
       String quattro = IntegerToRoman.convert(4);
       String cinque = IntegerToRoman.convert(5);
       String sei = IntegerToRoman.convert(6);
@@ -36,7 +36,7 @@ public class IntegerToRomanTest {
    }
 
    @Test
-   public void FirstTenNumbers() {
+   public void TestFirstTenNumbers() {
       String sette = IntegerToRoman.convert(7);
       String otto = IntegerToRoman.convert(8);
       String nove = IntegerToRoman.convert(9);
@@ -52,7 +52,7 @@ public class IntegerToRomanTest {
    }
 
    @Test
-   public void First20Numbers() {
+   public void TestFirst20Numbers() {
       String undici = IntegerToRoman.convert(11);
       String dodici = IntegerToRoman.convert(12);
       String tredici = IntegerToRoman.convert(13);
@@ -88,7 +88,7 @@ public class IntegerToRomanTest {
    // per questioni di onerosità da questo test iniziamo a testare dei valori
    // campione e non tutto l'intervallo
    @Test
-   public void First50Numbers() {
+   public void TestFirst50Numbers() {
       String vtre = IntegerToRoman.convert(23);
       String tuno = IntegerToRoman.convert(31);
       String totto = IntegerToRoman.convert(38);
@@ -122,7 +122,7 @@ public class IntegerToRomanTest {
    }
 
    @Test
-   public void First100Numbers() {
+   public void TestFirst100Numbers() {
       String ccinque = IntegerToRoman.convert(55);
       String stre = IntegerToRoman.convert(63);
       String setd = IntegerToRoman.convert(72);
@@ -156,7 +156,7 @@ public class IntegerToRomanTest {
    }
 
    @Test
-   public void First500Numbers() {
+   public void TestFirst500Numbers() {
       String dtre = IntegerToRoman.convert(123);
       String onove = IntegerToRoman.convert(189);
       String scinque = IntegerToRoman.convert(275);
@@ -190,7 +190,7 @@ public class IntegerToRomanTest {
    }
 
    @Test
-   public void First1000Numbers() {
+   public void TestFirst1000Numbers() {
       String tquattro = IntegerToRoman.convert(534);
       String udue = IntegerToRoman.convert(612);
       String ctre = IntegerToRoman.convert(753);
@@ -221,5 +221,11 @@ public class IntegerToRomanTest {
       assertEquals(h, qtre);
       assertEquals(i, onove);
       assertEquals(l, odue);
+   }
+   @Test(expected = IllegalArgumentException.class)
+   public void TestException() throws IllegalArgumentException
+   {
+      int n=-10;
+      IntegerToRoman.convert(n);
    }
 }
