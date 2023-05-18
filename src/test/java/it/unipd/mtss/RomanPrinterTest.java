@@ -40,7 +40,7 @@ public class RomanPrinterTest {
         assertEquals(V, ascii);
     }
     @Test
-    public void testPrintL()
+    public void TestPrintL()
     {
         int n=50;
         String L=new String(" _      \n" +
@@ -55,7 +55,7 @@ public class RomanPrinterTest {
         assertEquals(L, ascii);
     }
     @Test
-    public void testPrintC()
+    public void TestPrintC()
     {
         int n=100;
         String C=new String("  _____ \n" +
@@ -70,7 +70,7 @@ public class RomanPrinterTest {
         assertEquals(C, ascii);
     }
     @Test
-    public void testPrintD()
+    public void TestPrintD()
     {
         int n=500;
         String D=new String(" _____  \n" +
@@ -86,7 +86,7 @@ public class RomanPrinterTest {
     }
 
     @Test
-    public void testPrintM()
+    public void TestPrintM()
     {
         int n=1000;
         String M = new String(" __  __ \n" +
@@ -101,7 +101,7 @@ public class RomanPrinterTest {
         assertEquals(M, ascii);
     }
     @Test
-    public void testNumberZeroAsciiArt()
+    public void TestZero()
     {
         int n=0;
         String zero="";
@@ -111,22 +111,36 @@ public class RomanPrinterTest {
         assertEquals(zero, ascii);
     }
     @Test
-    public void testLettersCombination1666()
+    public void TestL511()
     {
-        int n=1666;
-        String exp=new String(
-                " __  __ " + " _____  " + "  _____ " + " _      " + "__   __" + "__      __" + " _____ \n" +
-                        "|  \\/  |" + "|  __ \\ " + " / ____|" + "| |     " + "\\ \\ / /" + "\\ \\    / /" + "|_   _|\n"
-                        +
-                        "| \\  / |" + "| |  | |" + "| |     " + "| |     " + " \\ V / " + " \\ \\  / / " + "  | |  \n" +
-                        "| |\\/| |" + "| |  | |" + "| |     " + "| |     " + "  > <  " + "  \\ \\/ /  " + "  | |  \n" +
-                        "| |  | |" + "| |__| |" + "| |____ " + "| |____ " + " / . \\ " + "   \\  /   " + " _| |_ \n" +
-                        "|_|  |_|" + "|_____/ " + " \\_____|" + "|______|" + "/_/ \\_\\" + "    \\/    "
-                        + "|_____|\n");
+        int n=511;
+        String cunouno=new String(" _____  " + "__   __" + " _____ \n" +
+                "|  __ \\ " + "\\ \\ / /" + "|_   _|\n"
+                + "| |  | |" + " \\ V / " + "  | |  \n" +
+                "| |  | |" + "  > <  " + "  | |  \n" +
+                "| |__| |" + " / . \\ " + " _| |_ \n" +
+                "|_____/ " + "/_/ \\_\\"
+                + "|_____|\n");
 
         String ascii=RomanPrinter.print(n);
 
-        assertEquals(exp, ascii);
+        assertEquals(cunouno, ascii);
+    }
+
+    @Test
+    public void TestL56()
+    {
+        int n=65;
+        String scinque=new String(" _      " + "__   __" + "__      __\n" +
+                "| |     " + "\\ \\ / /" + "\\ \\    / /\n" +
+                "| |     " + " \\ V / " + " \\ \\  / / \n" +
+                "| |     " + "  > <  " + "  \\ \\/ /  \n" +
+                "| |____ " + " / . \\ " + "   \\  /   \n" +
+                "|______|" + "/_/ \\_\\" + "    \\/    \n");
+
+        String ascii=RomanPrinter.print(n);
+
+        assertEquals(scinque, ascii);
     }
 
 }
