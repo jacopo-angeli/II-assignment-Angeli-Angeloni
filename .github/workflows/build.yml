@@ -1,0 +1,36 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🧺 Checkout Repository Code
+        uses: actions/checkout@v3
+
+      - name: 🛠 Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: "11"
+          distribution: "adopt"
+          cache: maven
+
+      - name: 📦 Build with Maven
+        run: mvn -B clean package
+
+      - name: 🚀 Generate site JaCoCo
+        run: mvn test jacoco:report
+
+      - name: 🚀 Coveralls Coverage Report Submission
+        run: mvn coveralls:report --define repoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
+
+      - name: 🚀 Copy Checkstyle badge
+        run: cp target/site/badges/checkstyle-result.svg .github/badges/
+
+      - name: Commit and push the badge
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          message: "commit badge"
+          add: "*.svg"
