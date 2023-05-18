@@ -1,8 +1,8 @@
 # II-assignment-Angeli-Angeloni
 
-Secondo assignment | MTSS | AA 2022/2023
+### Main branch status:
 
-[![Coverage Status](https://coveralls.io/repos/github/jacopo-angeli/II-assignment-Angeli-Angeloni/badge.svg?branch=19-predisposizione-build-automation)](https://coveralls.io/github/jacopo-angeli/II-assignment-Angeli-Angeloni?branch=19-predisposizione-build-automation)
+[![Coverage Status](https://coveralls.io/repos/github/jacopo-angeli/II-assignment-Angeli-Angeloni/badge.svg?branch=main)](https://coveralls.io/github/jacopo-angeli/II-assignment-Angeli-Angeloni?branch=main)
 
 ![Checkstyle](.github/badges/checkstyle-result.svg)
 
